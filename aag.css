@@ -1,0 +1,514 @@
+:root {
+  --primary: #0b1c2d;       /* deep navy */
+  --secondary: #c62828;     /* automotive red */
+  --accent: #f4c430;        /* gold */
+  --light: #f5f7fa;
+  --dark: #111;
+  --text-color: #222;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #fff;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+  
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(11, 28, 45, 0.85), rgba(11, 28, 45, 0.85)), 
+              url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--secondary);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #a91f1f;
+}
+
+/* Grid and cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h4 {
+  margin-bottom: 0.6rem;
+  color: var(--secondary);
+}
+
+/* About */
+.about p {
+  max-width: 9000px;
+  margin: auto 0 auto;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Team section */
+.team img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+/* Before & After */
+.before-after img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Why choose us / Guarantee */
+.intro-text {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Reviews */
+.reviews .review {
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+/* Booking Form */
+#booking form input,
+#booking form textarea,
+#booking form button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#booking form button {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#booking form button:hover {
+  background: #a91f1f;
+}
+
+/* Corporate / Map */
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.map-container iframe {
+  width: 85%;
+  max-width: 1000px;
+  height: 350px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* WhatsApp floating button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+    
+  }
+
+  nav {
+    margin-top: 0.8rem;
+  }
+}
+
+
+/* ===============================
+   Cars for Sale Section
+================================ */
+.cars-sale {
+  background: #fff;
+}
+
+.car-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.car-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--secondary);
+}
+
+.car-details {
+  padding: 1.2rem;
+}
+
+.car-details h4 {
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.car-details ul {
+  list-style: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.car-details ul li {
+  margin-bottom: 0.3rem;
+  margin-left: 15px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+.small-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+
+
+/* Image slider inside card */
+.car-slider {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.car-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.car-slider img.active {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.faq-item h4 {
+  color: var(--secondary);
+  margin-bottom: 0.6rem;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+
+
+/* ===============================
+   FAQ ACCORDION
+================================ */
+.faq-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: #f5f7fa;
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0 1.5rem 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* + becomes x */
+}
+
+
+
+
+
+
+
+
+/* Promotions & Certifications Sections */
+.promotions {
+  background: #c62828;
+  padding: 3rem 1rem;
+}
+.certifications {
+background: #f9f9f9;
+padding: 3rem 1rem;
+}
+.promotions h3, .certifications h3 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.promotions .intro-text, .certifications .intro-text {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  color: #fff;
+}
+
+.promotions .card, .certifications .card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.promotions .card h4, .certifications .card h4 {
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+.promotions .card p, .certifications .card p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.promotions .card .price {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.certifications .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
